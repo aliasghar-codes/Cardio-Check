@@ -4,7 +4,7 @@ CardioCheck estimates heart size from a front-view chest X-ray. It segments the 
 
 This is a university project built for learning and demonstration. It is not a medical device. See [Disclaimer](#disclaimer).
 
-![CardioCheck result for a normal chest X-ray, with the heart outline and measurement lines drawn on the image](docs/screenshots/result-normal.PNG)
+![CardioCheck result for a normal chest X-ray, with the heart outline and measurement lines drawn on the image](docs/screenshots/result-normal.png)
 
 ## Contents
 
@@ -210,9 +210,9 @@ The `/predict` endpoint uses a single cutoff at 0.50 for its `result` string. Th
 - **Size:** about 22.2 million parameters, roughly 90 MB
 - **Outputs:** masks for right lung, left lung and heart, plus a view classification (AP, PA, Lateral)
 - **Training data:** chest X-rays from CheXpert and NIH Chest X-ray, with masks from CheXmask
-- **Reported heart Dice score:** 0.943 on the validation set, as published by the model author
+- **Reported view classification accuracy:** 99.42% (AP, PA, Lateral), as published by the model author
 
-The Dice figure comes from the model's own documentation. We did not run our own evaluation, so treat it as the author's number and not as a result for this application. If you want a number you can defend, measure CTR on a labelled set and compare it with radiologist measurements.
+The accuracy figure comes from the model's own documentation. We did not run our own evaluation, so treat it as the author's number and not as a result for this application. If you want a number you can defend, measure CTR on a labelled set and compare it with radiologist measurements.
 
 ## Limitations
 
