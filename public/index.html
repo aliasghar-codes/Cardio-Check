@@ -643,7 +643,7 @@
               >
                 <span class="material-symbols-outlined text-[16px] text-primary"
                   >check_circle</span
-                >Heart Dice score: 0.943
+                >View detection accuracy: 99.42%
               </div>
             </div>
             <div
@@ -688,10 +688,10 @@
                 class="inline-flex items-center gap-1.5 text-primary text-label-sm font-label-sm uppercase tracking-wider"
               >
                 <span class="material-symbols-outlined text-sm">memory</span
-                ><span>Model Architecture &amp; Rigor</span>
+                ><span>Model Architecture</span>
               </div>
               <h2 class="text-headline-xl text-on-surface">
-                Deep Learning Engineered for Radiologic Confidence
+                The Model Behind CardioCheck
               </h2>
               <p class="text-body-lg text-on-surface-variant leading-relaxed">
                 CardioCheck uses a pretrained U-Net with an EfficientNetV2-S
@@ -731,21 +731,20 @@
                 <div
                   class="flex justify-between items-center text-xs font-mono text-on-surface-variant"
                 >
-                  <span>CARDIAC CONTOUR</span
-                  ><span class="text-primary font-semibold"
-                    >VALIDATION SET</span
-                  >
+                  <span>VIEW DETECTION</span
+                  ><span class="text-primary font-semibold">AS REPORTED</span>
                 </div>
                 <div
                   class="text-metric-display font-metric-display text-primary mt-2"
                 >
-                  0.943
+                  99.42%
                 </div>
                 <div class="text-label-md text-on-surface mt-1 font-semibold">
-                  Dice Similarity Coefficient
+                  View Classification Accuracy
                 </div>
                 <p class="text-body-sm text-on-surface-variant mt-2">
-                  How closely the heart outline matches the reference outline.
+                  How often the model correctly labels an X-ray as AP, PA or
+                  lateral, as reported by the model author.
                 </p>
               </div>
               <div class="bg-surface border border-outline-variant rounded p-6">
@@ -791,8 +790,8 @@
                 <div
                   class="flex justify-between items-center text-xs font-mono text-on-surface-variant"
                 >
-                  <span>INFERENCE SPEED</span
-                  ><span class="text-primary font-semibold">ON-DEVICE</span>
+                  <span>HARDWARE</span
+                  ><span class="text-primary font-semibold">LOCAL SERVER</span>
                 </div>
                 <div
                   class="text-metric-display font-metric-display text-primary mt-2"
@@ -851,10 +850,11 @@
               <div
                 class="lg:col-span-7 text-body-md text-on-surface-variant leading-relaxed"
               >
-                Measured at the widest transverse dimension of the cardiac
-                silhouette against the inner margins of the ribs at the level of
-                the diaphragm on full inspiratory posteroanterior (PA)
-                projection. Supine or AP exams inherently exaggerate CTR.
+                Measured as the widest left-to-right width of the heart divided
+                by the widest internal width of the chest (inner edge of the
+                ribs, usually just above the costophrenic angles), on a
+                full-inspiration posteroanterior (PA) film. Supine or AP films
+                tend to exaggerate the ratio.
               </div>
             </div>
           </div>
@@ -874,9 +874,8 @@
                   Normal Cardiac Silhouette
                 </h3>
                 <p class="text-body-sm text-on-surface-variant mt-2">
-                  Cardiothoracic proportion is within expected physiological
-                  parameters. Unlikely gross ventricular dilatation or
-                  pericardial effusion.
+                  Heart size is within the usual adult range on a PA film. A
+                  normal ratio does not rule out heart disease.
                 </p>
               </div>
             </div>
@@ -893,8 +892,9 @@
                   Borderline Enlargement
                 </h3>
                 <p class="text-body-sm text-on-surface-variant mt-2">
-                  Marginal transverse increase. May correlate with sub-optimal
-                  inspiration, habitus, or early congestive / valvular changes.
+                  Marginal increase. Can be caused by poor inspiration, body
+                  build, or early heart changes. This band is a project
+                  convention, not a standard clinical category.
                 </p>
               </div>
             </div>
@@ -911,9 +911,9 @@
                   Suspected Cardiomegaly
                 </h3>
                 <p class="text-body-sm text-on-surface-variant mt-2">
-                  Significantly elevated cardiac index indicating probable
-                  ventricular hypertrophy, pericardial effusion, or severe
-                  valvular insufficiency.
+                  Above the usual 0.50 cutoff. Possible causes include true
+                  heart enlargement or pericardial effusion, but also poor
+                  inspiration, obesity, pregnancy, or an epicardial fat pad.
                 </p>
               </div>
             </div>
