@@ -4,7 +4,7 @@ CardioCheck estimates heart size from a front-view chest X-ray. It segments the 
 
 This is a university project built for learning and demonstration. It is not a medical device. See [Disclaimer](#disclaimer).
 
-![CardioCheck result for a normal chest X-ray, with the heart outline and measurement lines drawn on the image](docs/screenshots/result-normal.png)
+![CardioCheck result for a normal chest X-ray, with the heart outline and measurement lines drawn on the image](docs/screenshots/result-normal.PNG)
 
 ## Contents
 
